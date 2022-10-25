@@ -39,11 +39,6 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-app.get("/landmarks", function (req, res) {
-  res.render("landmarks/index", {
-    landmarks: landmarks.getAll(),
-  });
-});
 
 
 module.exports = app;
