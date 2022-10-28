@@ -5,7 +5,8 @@ module.exports = {
     index,
     show,
     new: newLandmark,
-    create
+    create,
+    delete: deleteLandmark
 };
 
 
@@ -32,4 +33,9 @@ function create (req, res) {
 //   console.log(req.body);
   Landmarks.create(req.body);
   res.redirect('/landmarks');
+}
+
+function deleteLandmark (req, res) {
+    Landmarks.deleteOne(req.params.id);
+    res.redirect('/landmarks');
 }

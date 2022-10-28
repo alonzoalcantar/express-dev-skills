@@ -13,6 +13,10 @@
         <ul>
           <% landmarks.forEach(function(t) { %>
             <li>
+              <form action="/landmarks/<%= t.id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">Remove Landmark</button>
+              </form>
               <a href="/landmarks/<%= t.id %>"><%= t.landmarks %></a>
                 - 
               <%= t.done ? 'One of the 7 Wonders of the World!' : 'Not considered a World Wonder' %>

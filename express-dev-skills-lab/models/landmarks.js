@@ -8,7 +8,8 @@ const landmarks = [
   module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
   };
   
   function getAll() {
@@ -21,8 +22,17 @@ const landmarks = [
   }
 
 
-function create(newLandmark){
+function create(newLandmark) {
   landmarks.id = Date.now() % 1000000;
   landmarks.push(newLandmark);
-  console.log(landmarks);
+
+  
 }
+
+function deleteOne(id) {
+  id = parseInt(id)
+  const idx = landmarks.findIndex(landmarks => landmarks.id === id);
+  landmarks.splice(idx, 1);
+
+}
+
