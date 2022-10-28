@@ -3,12 +3,13 @@ const Landmarks = require('../models/landmarks');
 
 module.exports = {
     index,
-    show
+    show,
+    new: newLandmark
 };
 
 
 function index(req, res) {
-    res.render('landmarks/index',{
+    res.render('landmarks/index', {
         landmarks: Landmarks.getAll()
     });
 }
@@ -19,3 +20,8 @@ function show (req,res) {
         landmarks: Landmarks.getOne(req.params.id),
       });
     }
+
+
+function newLandmark (req,res) {
+    res.render('landmarks/new')
+}
