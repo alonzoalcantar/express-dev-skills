@@ -1,10 +1,13 @@
+const clicker = require('../models/clicker');
 
 
 const index = (req, res) => {
-    res.send('<button>Click Me!</button>')
+    res.render('clicker/index',{
+        clicked: clicker.timesClicked
+    })
 }
 
 
 
 
-module.exports = index
+module.exports = index;
