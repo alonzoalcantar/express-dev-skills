@@ -15,5 +15,7 @@ function index(req, res) {
 
 
 function show (req,res) {
-    res.send('hello here is landmark #' + req.params.id)
-}
+    res.render('landmarks/show', {
+        landmarks: Landmarks.getOne(req.params.id),
+      });
+    }

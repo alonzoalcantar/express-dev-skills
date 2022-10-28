@@ -6,10 +6,15 @@ const landmarks = [
   ];
   
   module.exports = {
-    getAll
+    getAll,
+    getOne
   };
   
   function getAll() {
     return landmarks;
   }
  
+  function getOne(id) {
+    id = parseInt(id);
+    return landmarks.find((landmarks) => landmarks.id === id);
+  }
