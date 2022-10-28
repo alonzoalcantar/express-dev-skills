@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World!</title>
+</head>
+<body>
+   
+    <body>
+        <h1>7 Wonders of the World</h1>
+        <ul>
+          <% landmarks.forEach(function(t) { %>
+            <li>
+              <%= t.landmarks %>
+                - 
+              <%= t.done ? 'One of the 7 Wonders of the World!' : 'Not considered a World Wonder' %>
+            </li>
+          <% }); %>
+        </ul>
+      </body>   
+      
+      
+</body>
+</html>
