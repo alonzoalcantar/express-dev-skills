@@ -11,5 +11,6 @@ router.get('/new', landmarksCtrl.new);
 
 router.get('/:id', landmarksCtrl.show);
 
+router.post('/', landmarksCtrl.create);
 
 module.exports = router;

@@ -7,7 +7,8 @@ const landmarks = [
   
   module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
   };
   
   function getAll() {
@@ -18,3 +19,10 @@ const landmarks = [
     id = parseInt(id);
     return landmarks.find((landmarks) => landmarks.id === id);
   }
+
+
+function create(newLandmark){
+  landmarks.id = Date.now() % 1000000;
+  landmarks.push(newLandmark);
+  console.log(landmarks);
+}
