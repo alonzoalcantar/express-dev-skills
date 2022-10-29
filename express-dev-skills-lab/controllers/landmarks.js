@@ -6,7 +6,9 @@ module.exports = {
     show,
     new: newLandmark,
     create,
-    delete: deleteLandmark
+    delete: deleteLandmark,
+    edit,
+    update
 };
 
 
@@ -38,4 +40,15 @@ function create (req, res) {
 function deleteLandmark (req, res) {
     Landmarks.deleteOne(req.params.id);
     res.redirect('/landmarks');
+}
+
+
+function edit(req,res) {
+    res.render('landmarks/edit', {
+        landmark: Landmarks.getOne(req.params.id)});
+}
+
+function update (req, res) {
+    Landmarks.updateOne(req.params.id, req.body)
+    res.redirect('/landmarks/' + req.params.id);
 }

@@ -9,7 +9,8 @@ const landmarks = [
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    updateOne
   };
   
   function getAll() {
@@ -23,7 +24,7 @@ const landmarks = [
 
 
 function create(newLandmark) {
-  landmarks.id = Date.now() % 1000000;
+  newLandmark.id = Date.now() % 1000000;
   landmarks.push(newLandmark);
 
   
@@ -36,3 +37,13 @@ function deleteOne(id) {
 
 }
 
+
+function updateOne(id, landmark) {
+console.log(id);
+id = parseInt(id);
+const newLandmark = landmarks.find((landmark) =>
+landmark.id === id)
+
+newLandmark.landmarks = landmark.landmarks;
+newLandmark.done = landmark.done;
+}

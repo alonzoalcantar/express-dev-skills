@@ -11,8 +11,12 @@ router.get('/new', landmarksCtrl.new);
 
 router.get('/:id', landmarksCtrl.show);
 
+router.get('/:id/edit', landmarksCtrl.edit)
+
 router.post('/', landmarksCtrl.create);
 
 router.delete('/:id', landmarksCtrl.delete);
+
+router.put('/:id', landmarksCtrl.update);
 
 module.exports = router;

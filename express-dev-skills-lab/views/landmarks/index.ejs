@@ -13,7 +13,7 @@
         <ul>
           <% landmarks.forEach(function(t) { %>
             <li>
-              <form action="/landmarks/<%= t.id %>?_method=DELETE"
+              <form action="/landmarks/ <%= t.id %>?_method=DELETE"
                 class="delete-form" method="POST">
                 <button type="submit">Remove Landmark</button>
               </form>

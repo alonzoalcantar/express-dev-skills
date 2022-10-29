@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+
+<body>
+    
+    <h1>Edit Landmark</h1>
+    
+
+
+     <form action="/landmarks/<%= landmark.id %>?_method=PUT" method="POST" autocomplete="off">
+        <input type="text" name="landmarks">
+         <button type="submit">Add to List</button>
+        
+        
+
+<p>Is this one of the 7 Wonders of the World??</p>
+<input id ="done-input" type ="checkbox" placeholder="true/false" name="done">
+
+</form>
+</body>
+</html>
